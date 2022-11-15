@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import styled from 'styled-components';
+import Formulario from './componentes/Formulario';
+import ListaContactos from './componentes/ListaContactos';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const App = () => {
+  return ( 
+    <div className='container'>
+      <div className='row justify-content-center'>
+        <Contenedor className='col-11 col-md-6'>
+          <h2>Contactos</h2>
+          <Formulario />
+          <ListaContactos />
+        </Contenedor>
+      </div>
     </div>
   );
 }
+
+const Contenedor = styled.div`
+  background: #fff;
+  margin-top: 60px;
+  padding: 20px 20px;
+  box-shadow:
+  6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+  22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+  100px 100px 80px rgba(0, 0, 0, 0.07);
+
+`;
 
 export default App;
